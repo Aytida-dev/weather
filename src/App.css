@@ -14,11 +14,18 @@
     padding: 0 20px 20px 20px;
   }
 
-  .top,.bottom{
+  .top{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
+  }
+
+  .bottom{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
 
   .city{
@@ -52,7 +59,7 @@
 
   .details{
     width: 100%;
-    padding-left: 20px;
+    /* padding-left: 20px; */
   }
 
   .paramRow{
@@ -77,4 +84,16 @@
     font-weight: 600;
     text-align: center;
     margin: 0;
+  }
+
+  .celcius{
+    font-size: 50px;
+    font-weight: 500;
+    vertical-align: text-top;
+  }
+
+  .range{
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
   }

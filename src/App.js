@@ -14,7 +14,7 @@ export default function App() {
     function handleOnSearchChange(searchData) {
         const [lat, lon] = searchData.value.split(" ");
        
-        const CurrentWeatherFetch=fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`)
+        const CurrentWeatherFetch=fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
 
         const forecastFetch= fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`)
 
@@ -47,9 +47,7 @@ export default function App() {
         <Search 
         onSearchChange={handleOnSearchChange}
         />
-        <CurrentWeather
-        {...currentWeather}
-        />
+        { currentWeather &&<CurrentWeather {...currentWeather}/>}
     </div>
   )
 }

@@ -28,10 +28,10 @@ export default function Forecast(props) {
                         <AccordionItemHeading>
                             <AccordionItemButton>
                                 <div className="dailyItem">
+                                    <img src={`icons/${item.weather[0].icon}.png`} alt="" className="iconSmall" />
                                     <label htmlFor="" className="day">{dayInWeek[index]}</label>
                                     <label htmlFor="" className="dayTemp">{item.main.temp}°C</label>
-                                    <label htmlFor="" className="dayDesc">{item.weather[0].description}</label>
-                                    <img src={`icons/${item.weather[0].icon}.png`} alt="" className="iconSmall" />
+                                    <label htmlFor="" className="dayDesc">{(item.weather[0].description).charAt(0).toUpperCase() + (item.weather[0].description).slice(1)}</label>
 
                                 </div>
                             </AccordionItemButton>

@@ -3,6 +3,7 @@ import Search from "./components/Search";
 import './App.css';
 import CurrentWeather from "./components/CurrentWeather";
 import { WEATHER_API_KEY,WEATHER_API_URL } from "./components/api";
+import Forecast from "./components/Forecast";
 
 
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
        
         const CurrentWeatherFetch=fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
 
-        const forecastFetch= fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`)
+        const forecastFetch= fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
 
 
         Promise.all([CurrentWeatherFetch,forecastFetch])
@@ -48,6 +49,7 @@ export default function App() {
         onSearchChange={handleOnSearchChange}
         />
         { currentWeather &&<CurrentWeather {...currentWeather}/>}
+        { forecast && <Forecast {...forecast}/>}
     </div>
   )
 }

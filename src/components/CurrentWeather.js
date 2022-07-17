@@ -22,7 +22,7 @@ export default function CurrentWeather(props) {
                     </div>
                     <div className="paramRow">
                         <span className="paramLabel">Wind</span>
-                        <span className="paramValue"> 2 m/s</span>
+                        <span className="paramValue"> {props.wind.speed} m/s</span>
                     </div>
                     <div className="paramRow">
                         <span className="paramLabel">Humidity</span>

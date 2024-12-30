@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/blogs/*"
+  to = "http://15.207.165.204/:splat"
+  status = 200
+  force = true
